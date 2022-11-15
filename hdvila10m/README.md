@@ -1,5 +1,7 @@
-# Create the csv shards
+# Create and upload csv shards, download scripts
 ```
+./csvsetup_hdvila10m.sh
+
 gsutil cp download_hdvila10m_transcripts.sh gs://youtube_download/hdvila10m/
 gsutil -m cp -r ~/data/hdvila/csv gs://youtube_download/hdvila10m/csv
 
