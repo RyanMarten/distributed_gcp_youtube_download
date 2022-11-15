@@ -1,0 +1,48 @@
+{
+  "taskGroups": [
+    {
+      "taskSpec": {
+        "runnables": [
+          {
+            "script": {
+              "text": "bash /mnt/share/webvid10m/download_webvid10m.sh"
+            }
+          }
+        ],
+        "computeResource": {
+          "cpuMilli": 128000,
+          "memoryMib": 64000
+        },
+        "volumes": [
+          {
+            "gcs": {
+              "remotePath": "youtube_download"
+            },
+            "mountPath": "/mnt/share"
+          }
+        ], 
+        "maxRetryCount": 0,
+        "maxRunDuration": "36000s"
+      },
+      "taskCount": 1, 
+      "parallelism": 1
+    }
+  ],
+  "allocationPolicy": {
+    "instances": [
+      {
+        "policy": {
+          "machineType": "n2d-highcpu-128",
+          "provisioningModel": "SPOT"
+        }
+      }
+    ]
+  }, 
+  "labels": {
+    "department": "creative",
+    "env": "testing"
+  },
+  "logsPolicy": {
+    "destination": "CLOUD_LOGGING"
+  }
+}

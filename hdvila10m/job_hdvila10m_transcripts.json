@@ -1,0 +1,47 @@
+{
+  "taskGroups": [
+    {
+      "taskSpec": {
+        "runnables": [
+          {
+            "script": {
+              "text": "bash /mnt/share/hdvila10m/download_hdvila10m_transcripts.sh"
+            }
+          }
+        ],
+        "computeResource": {
+          "cpuMilli": 128000,
+          "memoryMib": 64000
+        },
+        "volumes": [
+          {
+            "gcs": {
+              "remotePath": "youtube_download"
+            },
+            "mountPath": "/mnt/share"
+          }
+        ], 
+        "maxRetryCount": 0
+      },
+      "taskCount": 969, 
+      "parallelism": 969
+    }
+  ],
+  "allocationPolicy": {
+    "instances": [
+      {
+        "policy": {
+          "machineType": "n2d-highcpu-128",
+          "provisioningModel": "SPOT"
+        }
+      }
+    ]
+  }, 
+  "labels": {
+    "department": "creative",
+    "env": "testing"
+  },
+  "logsPolicy": {
+    "destination": "CLOUD_LOGGING"
+  }
+}
