@@ -1,4 +1,5 @@
-# just going to use the "ondemand" and do it on the single instance
+# generate csv
+./csvsetup_webvid.sh
 
 # script to bucket
 gsutil cp download_webvid10m.sh gs://youtube_download/webvid10m/

@@ -11,6 +11,9 @@ See [this presentation](https://docs.google.com/presentation/d/1i3DnsOmEFcfDuKG7
 `gsutil mb -b on -l US gs://youtube_download`
 
 ## Example (WebVid)
+### Generate CSV shards and upload to bucket
+`./csvsetup.sh`
+
 ### Upload script to bucket
 `gsutil cp download_webvid10m.sh gs://youtube_download/webvid10m/`
 
