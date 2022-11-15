@@ -1,5 +1,5 @@
 # generate csv
-`./csvsetup_webvid.sh`
+`./csvsetup_webvid10m.sh`
 
 # script to bucket
 `gsutil cp download_webvid10m.sh gs://youtube_download/webvid10m/`
